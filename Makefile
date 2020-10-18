@@ -1,5 +1,7 @@
-MIXIN = skeletor
-PKG = get.porter.sh/mixin/$(MIXIN)
+MIXIN = waypoint
+
+PKG = github.com/MChorfa/$(MIXIN)-mixin
+
 SHELL = bash
 
 GO = GO111MODULE=on go
@@ -106,4 +108,4 @@ clean: clean-packr
 	-rm -fr bin/
 
 clean-packr: packr2
-	cd pkg/skeletor && packr2 clean
+	cd pkg/waypoint && packr2 clean

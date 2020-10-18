@@ -4,41 +4,33 @@
     "installStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "waypoint": { "$ref": "#/definitions/waypoint" }
       },
-      "required": [
-        "skeletor"
-      ],
+      "required": ["waypoint"],
       "additionalProperties": false
     },
     "upgradeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "waypoint": { "$ref": "#/definitions/waypoint" }
       },
-      "required": [
-        "skeletor"
-      ],
+      "required": ["waypoint"],
       "additionalProperties": false
     },
     "invokeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "waypoint": { "$ref": "#/definitions/waypoint" }
       },
-      "required": [
-        "skeletor"
-      ],
+      "required": ["waypoint"],
       "additionalProperties": false
     },
     "uninstallStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "waypoint": { "$ref": "#/definitions/waypoint" }
       },
-      "required": [
-        "skeletor"
-      ],
+      "required": ["waypoint"],
       "additionalProperties": false
     },
     "stepDescription": {
@@ -64,17 +56,11 @@
           }
         },
         "additionalProperties": false,
-        "required": [
-          "name"
-        ],
-        "oneOf": [
-          { "required": [ "jsonPath" ] },
-          { "required": [ "regex" ] },
-          { "required": [ "path" ] }
-        ]
+        "required": ["name"],
+        "oneOf": [{ "required": ["jsonPath"] }, { "required": ["regex"] }, { "required": ["path"] }]
       }
     },
-    "skeletor": {
+    "waypoint": {
       "type": "object",
       "properties": {
         "description": {
@@ -89,7 +75,7 @@
         "flags": {
           "type": "object",
           "additionalProperties": {
-            "type": ["null","boolean","number","string"]
+            "type": ["null", "boolean", "number", "string"]
           }
         },
         "outputs": {
@@ -97,9 +83,7 @@
         }
       },
       "additionalProperties": false,
-      "required": [
-        "description"
-      ]
+      "required": ["description"]
     }
   },
   "type": "object",

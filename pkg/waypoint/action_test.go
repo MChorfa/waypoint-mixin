@@ -1,4 +1,4 @@
-package skeletor
+package waypoint
 
 import (
 	"io/ioutil"

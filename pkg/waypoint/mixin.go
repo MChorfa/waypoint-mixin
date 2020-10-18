@@ -1,11 +1,11 @@
 //go:generate packr2
-package skeletor
+package waypoint
 
 import (
 	"get.porter.sh/porter/pkg/context"
 )
 
-const defaultClientVersion string = "v0.0.0"
+const defaultClientVersion string = "0.1.2"
 
 type Mixin struct {
 	*context.Context
